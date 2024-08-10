@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "server": "node index.js",
-    "client-build": "npm install --prefix client && npm run build --prefix client",
-    "start": "npm run client-build && node index.js",
+    "build-client": "npm install --prefix client && npm run build --prefix client",
+    "build": "npm run build-client",
+    "start": "npm run build-client && node index.js",
     "dev": "nodemon index.js"
   },
   "keywords": [],
