@@ -1,12 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend server for the application",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "server": "node index.js",
-    "build":"npm install --prefix client && npm run build --prefix client && npm start"
+    "client-build": "npm install --prefix client && npm run build --prefix client",
+    "start": "npm run client-build && node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -20,3 +22,4 @@
     "nodemon": "^3.1.4"
   }
 }
+
